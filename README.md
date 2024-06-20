@@ -78,3 +78,31 @@ $ npm run crawl
 [LINE]:                  <li>Additional referral resources are on the <a href="https://www.kcc.edu/student-resources/counseling-and-referral-services/">Counseling and Referral Services page</a>.</li>
 =====
 ```
+
+### Crawler
+
+The `crawler` npm script does the same thing as `crawl` but uses command line arguments to set the regular expression used in crawling.
+
+Arguments must include an equals-sign. Wrap argument values in quotes if you don't want to escape backslashes.
+
+The ***required*** `--regex=...` argument is used set the regular expression:
+
+```bash
+npm run crawler -- --regex='https:\/\/www\.kcc\.edu\/student-resources\/?'
+
+# You must escape backslashes if not using quotes:
+npm run crawler -- --regex=https:\\/\\/www\\.kcc\\.edu\\/student-resources\\/?
+```
+
+The ***optional*** `--flags=...` argument is used to set the regular expression flags. If the argument is omitted, the global (`g`) flag will be used as a default.
+
+```bash
+npm run crawler -- --flags=gi --regex='https:\/\/www\.kcc\.edu\/student-resources\/?'
+```
+
+Remember that npm requires double hyphens before any script arguments:
+```bash
+npm run <command> [-- <args>]
+```
+
+The order of the arguments does not matter. An invalid regular expression will cause the script to error-out.
