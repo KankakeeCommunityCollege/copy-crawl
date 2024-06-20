@@ -41,7 +41,7 @@ npm run clean # Delete everything in the `./copy` folder
 URL=www.example.com npm run copy # Use wget to copy HTML pages to `./copy`
 ```
 
-The `copy` npm script uses `wget` to make a copy of www.kcc.edu in the local `./copy/` folder. It does not copy images, JS, CSS or other dependencies, only the HTML files that makeup the website.
+The `copy` npm script uses `wget` to make a copy of www.example.com in the local `./copy/` folder. It does not copy images, JS, CSS or other dependencies, only the HTML files that makeup the website.
 
 The `wget` command will not traverse any higher than the URL you give it. For example `URL=www.example.com/foo/bar/ npm start` (or `URL=www.example.com/foo/bar/ npm run copy`) will copy everything under `/foo/bar/` but not go up to `/foo/` or the domain root.
 
