@@ -1,0 +1,15 @@
+{
+  "name": "copy-crawl",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run clean && npm run copy",
+    "clean": "node clean.mjs",
+    "copy": "wget --random-wait -E -r --no-parent --reject '*.js,*.css,*.ico,*.txt,*.gif,*.jpg,*.jpeg,*.png,*.mp3,*.pdf,*.tgz,*.flv,*.avi,*.mpeg,*.iso' --ignore-tags=img,link,script --header=\"Accept: text/html\" -e robots=off -P ./copy/ --no-host-directories $URL --user-agent=\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36\"",
+    "crawl": "node crawl.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
