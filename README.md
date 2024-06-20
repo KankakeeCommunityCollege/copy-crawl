@@ -15,7 +15,7 @@
 ## Installation
 
 ```bash
-git clone <url>
+git clone git@github.com:KankakeeCommunityCollege/copy-crawl.git
 cd copy-crawl
 
 # If you use nvm and it's not setup to automatically switch:
