@@ -53,7 +53,7 @@ Crawl through the HTML pages copied into `./copy/`:
 npm run crawl
 ```
 
-The above npm script will iterate through every HTML file in the `./copy/` folder. It looks for matches against the regular wxpression stored in the  `searchRegex` constant defined in the module scope of `crawl.mjs`.
+The above npm script will iterate through every HTML file in the `./copy/` folder. It looks for matches against the regular expression stored in the  `searchRegex` constant defined in the module scope of `crawl.mjs`.
 
 Adjust the `searchRegex` constant to search for whatever string you want in the HTML.
 
@@ -81,7 +81,7 @@ $ npm run crawl
 
 ### Crawler
 
-The `crawler` npm script does the same thing as `crawl` but uses command line arguments to set the regular expression used in crawling.
+The `crawler` npm script does the same thing as `crawl` but uses command line arguments to set the regular expression used.
 
 Arguments must include an equals-sign. Wrap argument values in quotes if you don't want to escape backslashes.
 
@@ -100,9 +100,9 @@ The ***optional*** `--flags=...` argument is used to set the regular expression 
 npm run crawler -- --flags=gi --regex='https:\/\/www\.kcc\.edu\/student-resources\/?'
 ```
 
+The order of the arguments does not matter. An invalid regular expression will cause the script to error-out.
+
 Remember that npm requires double hyphens before any script arguments:
 ```bash
 npm run <command> [-- <args>]
 ```
-
-The order of the arguments does not matter. An invalid regular expression will cause the script to error-out.
